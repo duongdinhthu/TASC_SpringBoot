@@ -8,29 +8,29 @@ import jakarta.validation.constraints.Size;
 
 import java.time.LocalDateTime;
 
-@Entity
+@Entity    //đây là annotation của JPA
 public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "customer_id")  // Tên cột trong database
+    @Id //đây là annotation của JPA
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //đây là annotation của JPA
+    @Column(name = "customer_id")  // Tên cột trong database . đây là annotation của JPA
     private Long customerId;
 
-    @NotBlank
-    @Column(name = "name")          // Tên cột trong database
+    @NotBlank //annotation  Java Bean Validation quan li (validate input)
+    @Column(name = "name")          // Tên cột trong database //đây là annotation của JPA
     private String name;
 
-    @Email
-    @Column(name = "email")         // Tên cột trong database
+    @Email//annotation  Java Bean Validation quan li (validate input)
+    @Column(name = "email")         // Tên cột trong database //đây là annotation của JPA
     private String email;
 
-    @Size(min = 2, max = 10)
-    @Column(name = "phone_number")   // Tên cột trong database
+    @Size(min = 2, max = 10)//annotation  Java Bean Validation quan li (validate input)
+    @Column(name = "phone_number")   // Tên cột trong database //đây là annotation của JPA
     private String phoneNumber;
 
-    @Column(name = "address")        // Tên cột trong database
+    @Column(name = "address")        // Tên cột trong database //đây là annotation của JPA
     private String address;
 
-    @Column(name = "created_at")     // Tên cột trong database
+    @Column(name = "created_at")     // Tên cột trong database //đây là annotation của JPA
     private LocalDateTime createdAt = LocalDateTime.now();
 
     // Getters và Setters
