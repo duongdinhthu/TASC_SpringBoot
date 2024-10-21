@@ -1,4 +1,4 @@
-package com.example.TASC_SpringBoot.IoC_DI;
+package example.IoC_DI;
 
 import org.springframework.stereotype.Component;
 

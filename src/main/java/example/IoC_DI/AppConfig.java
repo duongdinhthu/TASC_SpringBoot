@@ -1,4 +1,4 @@
-package com.example.TASC_SpringBoot.IoC_DI;
+package example.IoC_DI;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,3 +17,12 @@ public class AppConfig {
         return new Engine();  // Bean Engine được tạo ra và tiêm vào Car
     }
 }
+// CommandLineRunner sẽ chạy khi ứng dụng khởi động
+//	@Bean
+//	public CommandLineRunner run(ApplicationContext ctx) {
+//		return args -> {
+//			// Lấy bean Car từ Spring Context
+//			Car car = ctx.getBean(Car.class);
+//			car.drive();  // Gọi phương thức drive trên đối tượng Car
+//		};
+//	}

@@ -1,4 +1,4 @@
-package com.example.TASC_SpringBoot.IoC_DI;
+package example.IoC_DI;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

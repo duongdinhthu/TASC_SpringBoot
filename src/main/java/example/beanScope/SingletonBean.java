@@ -1,4 +1,4 @@
-package com.example.TASC_SpringBoot.beanScope;
+package example.beanScope;
 
 import org.springframework.stereotype.Component;
 
