@@ -8,7 +8,11 @@ CascadeType.REMOVE: Khi entity cha bị xóa, các entity con cũng sẽ bị x�
 CascadeType.REFRESH: Khi entity cha được làm mới, các entity con cũng sẽ được làm mới.
 CascadeType.DETACH: Khi entity cha bị tách ra khỏi EntityManager, các entity con cũng sẽ bị tách ra.
 
-
+Cascade Type
+Cascade Type cho phép bạn xác định cách mà các hành động 
+(như lưu, cập nhật, xóa) trên một entity cha sẽ ảnh hưởng đến các entity con liên quan. 
+Nói cách khác, khi bạn thực hiện một hành động trên entity cha,
+JPA sẽ tự động thực hiện hành động tương ứng trên các entity con nếu bạn đã cấu hình cascade cho mối quan hệ đó.
 
 2. Fetch Type
    Fetch Type xác định cách mà JPA sẽ lấy dữ liệu cho các entity liên quan khi truy vấn. Hai loại fetch type chính là:

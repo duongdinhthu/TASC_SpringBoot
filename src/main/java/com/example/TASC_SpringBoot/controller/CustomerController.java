@@ -46,4 +46,37 @@ public class CustomerController {
         customerService.deleteCustomer(id);
         return ResponseEntity.noContent().build();
     }
+
+
 }
+
+
+//public void add(){
+//    // Tạo một khách hàng và thêm đơn hàng
+//    Customer customer = new Customer();
+//    customer.setName("John Doe");
+//
+//    Order order1 = new Order();
+//    order1.setProduct("Laptop");
+//    order1.setCustomer(customer); // Liên kết đơn hàng với khách hàng
+//
+//    Order order2 = new Order();
+//    order2.setProduct("Phone");
+//    order2.setCustomer(customer); // Liên kết đơn hàng với khách hàng
+//
+//// Thêm đơn hàng vào danh sách đơn hàng của khách hàng
+//    customer.getOrders().add(order1);
+//    customer.getOrders().add(order2);
+//
+//// Lưu khách hàng (cả khách hàng và đơn hàng sẽ được lưu)
+//    customerRepository.save(customer);
+//
+//}
+
+
+
+//public void delete(){
+//    Customer customer = customerRepository.findById(1L).orElseThrow();
+//    customerRepository.delete(customer); // Cả khách hàng và tất cả đơn hàng liên quan sẽ bị xóa
+//
+//}

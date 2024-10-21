@@ -7,6 +7,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity    //đây là annotation của JPA
 public class Customer {
@@ -32,6 +34,9 @@ public class Customer {
 
     @Column(name = "created_at")     // Tên cột trong database //đây là annotation của JPA
     private LocalDateTime createdAt = LocalDateTime.now();
+    // Thiết lập quan hệ OneToMany với cascade ALL
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Orders> orders = new ArrayList<>();
 
     // Getters và Setters
     public Long getCustomerId() { return customerId; }
@@ -39,6 +44,14 @@ public class Customer {
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
+
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
+    }
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
