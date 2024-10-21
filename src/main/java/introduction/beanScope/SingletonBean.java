@@ -1,4 +1,4 @@
-package example.beanScope;
+package introduction.beanScope;
 
 import org.springframework.stereotype.Component;
 

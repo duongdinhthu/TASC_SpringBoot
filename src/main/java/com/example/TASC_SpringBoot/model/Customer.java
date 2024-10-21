@@ -1,6 +1,11 @@
 package com.example.TASC_SpringBoot.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -10,12 +15,15 @@ public class Customer {
     @Column(name = "customer_id")  // Tên cột trong database
     private Long customerId;
 
+    @NotBlank
     @Column(name = "name")          // Tên cột trong database
     private String name;
 
+    @Email
     @Column(name = "email")         // Tên cột trong database
     private String email;
 
+    @Size(min = 2, max = 10)
     @Column(name = "phone_number")   // Tên cột trong database
     private String phoneNumber;
 

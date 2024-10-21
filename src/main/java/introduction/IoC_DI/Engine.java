@@ -1,4 +1,4 @@
-package example.IoC_DI;
+package introduction.IoC_DI;
 
 import org.springframework.stereotype.Component;
 

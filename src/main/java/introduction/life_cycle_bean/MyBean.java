@@ -1,12 +1,8 @@
-package example.life_cycle_bean;
+package introduction.life_cycle_bean;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import com.example.TASC_SpringBoot.TascSpringBootApplication;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component
